@@ -1,4 +1,4 @@
-# Ace!: A Card Memorization Mobile Game
+# Ace!: A Card Memorization and Matching Mobile Game
 Development Details:
 - Unity Version:
 - Windows 11
