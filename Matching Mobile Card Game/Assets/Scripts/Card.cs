@@ -1,0 +1,48 @@
+using UnityEngine;
+using UnityEngine.UI;
+
+public class Card : MonoBehaviour
+{
+    public int cardID;
+
+    public Image cardImage;
+    public Sprite frontSprite;
+    public Sprite backSprite;
+
+    private bool isFlipped = false;
+    private bool isMatched = false;
+
+    public void SetCard(int id, Sprite front)
+    {
+        cardID = id;
+        frontSprite = front;
+        cardImage.sprite = backSprite;
+    }
+
+    public void OnCardClicked()
+    {
+        if (isFlipped || isMatched || BoardManager.Instance.IsBusy())
+            return;
+
+        FlipUp();
+        BoardManager.Instance.CardFlipped(this);
+    }
+
+    public void FlipUp()
+    {
+        isFlipped = true;
+        cardImage.sprite = frontSprite;
+    }
+
+    public void FlipDown()
+    {
+        isFlipped = false;
+        cardImage.sprite = backSprite;
+    }
+
+    public void SetMatched()
+    {
+        isMatched = true;
+        gameObject.SetActive(false);
+    }
+}
