@@ -19,9 +19,9 @@
 
 ## 3. How to Play
 ### Controls
-  -Tap a card to flip it over.
-  -Tap a second card to attempt a match.
-  -Swipe to restart the level.
+* **Tap** a card to flip it over.
+* **Tap** a second card to attempt a match.
+* **Swipe** to restart the level.
 
 ### Rules
 - Matching: If the two cards you select match, they will disappear from the board.
