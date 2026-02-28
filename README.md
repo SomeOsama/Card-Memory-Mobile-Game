@@ -33,14 +33,13 @@
 ---
 
 ## 4. Core Features Implemented
-  -Card Flipping Mechanic
-  -Match Detection System
-  -Randomized Board Generation
-  -Timer System
-  -Win Screen Display
-  -Best Time Saving System
-  -Pause Menu
-  -Restart Menu
+- [x] **Card Flipping Mechanic:** 
+- [x] **Match Detection System:** 
+- [x] **Randomized Board Generation:** 
+- [x] **Timer System:** 
+- [x] **Win Screen Display:** 
+- [x] **Best Time Saving System:** 
+- [x] **Pause Menu:** 
 
 ---
 
