@@ -49,4 +49,23 @@ public class GameManager : MonoBehaviour
     }
 
 
+    private bool isPaused = false;
+
+    public void TogglePause()
+    {
+        if (!isPaused)
+        {
+            Time.timeScale = 0f; 
+            isPaused = true;
+        }
+        else
+        {
+            Time.timeScale = 1f; 
+            isPaused = false;
+        }
+    }
+
+
+
+
 }
