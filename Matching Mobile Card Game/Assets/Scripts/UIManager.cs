@@ -29,4 +29,13 @@ public class UIManager : MonoBehaviour
         float bestTime = PlayerPrefs.GetFloat("BestTime", time);
         bestTimeText.text = "Best Time: " + bestTime.ToString("F2");
     }
+
+
+    public void HideWinPanel()
+    {
+        if (winPanel != null)
+            winPanel.SetActive(false);
+    }
+
+
 }

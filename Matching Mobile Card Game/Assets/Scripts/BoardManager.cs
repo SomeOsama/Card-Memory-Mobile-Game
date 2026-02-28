@@ -21,19 +21,24 @@ public class BoardManager : MonoBehaviour
 
     private void Start()
     {
-        GenerateBoard();
+        GenerateBoard(GameManager.Instance.currentLevel);
     }
+
 
     public bool IsBusy()
     {
         return isChecking;
     }
 
-    void GenerateBoard()
+    public void GenerateBoard(int level = 1)
     {
+        
+        foreach (Transform child in gridParent)
+            Destroy(child.gameObject);
+
         List<int> ids = new List<int>();
 
-        int pairCount = cardSprites.Length;
+        int pairCount = GameManager.Instance.cardsPerLevel[level - 1] / 2;
 
         for (int i = 0; i < pairCount; i++)
         {
@@ -52,6 +57,7 @@ public class BoardManager : MonoBehaviour
 
         matchesRemaining = pairCount;
     }
+
 
     public void CardFlipped(Card card)
     {

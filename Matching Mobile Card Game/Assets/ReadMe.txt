@@ -29,6 +29,8 @@ Tap a second card to attempt a match.
 
 Swipe down to restart the level.
 
+Tap with 2 fingers at the same time to pause the level and do the same to unpause.
+
 Rules:
 
 If the two cards you select match, they will disappear.
