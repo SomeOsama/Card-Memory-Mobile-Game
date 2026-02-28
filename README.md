@@ -1,62 +1,50 @@
-1. Game Title- Ace
-Genre- Memory Card Matching Game
+# Ace- Memory Card Matching Game
 
-2. Development Environment
+## 1. Project Overview
+* **Game Title:** Ace
+* **Genre:** Memory Card Matching Game
+* **Core Objective:** Match all pairs of cards as quickly as possible to clear the board and achieve the fastest time in each level.
 
-Game Engine: Unity
+## 2. Development Environment
+* **Game Engine:** Unity
+* **Unity Version:** 6000.2.14f1
+* **Platform Built For:** Android
+* **Testing Device:** Samsung Galaxy Tab A9+
+* **Screen Orientation:** Portrait
+* **Input Type:** Touch Input
 
-Unity Version: 6000.2.14f1
+>The game was developed and tested using the specific Unity version and Android tablet device listed above.
 
-Platform Built For: Android
+---
 
-Testing Device: Samsung Galaxy Tab A9+
+## 3. How to Play
+### Controls
+  -Tap a card to flip it over.
+  -Tap a second card to attempt a match.
+  -Swipe to restart the level.
 
-Screen Orientation: Portrait
+### Rules
+- Matching: If the two cards you select match, they will disappear from the board.
+- Mismatched: If the cards do not match, they will flip back over after a short delay.
+- Timing: The timer starts automatically at the beginning of the level.
+- Completion: The game ends when all card pairs are matched. Your completion time will be displayed at the end.
+- Scoring: Your fastest completion time is saved as your **Best Time**.
 
-Input Type: Touch Input
+---
 
-The game was developed and tested using the Unity version and Android tablet device listed above.
+## 4. Core Features Implemented
+  -Card Flipping Mechanic
+  -Match Detection System
+  -Randomized Board Generation
+  -Timer System
+  -Win Screen Display
+  -Best Time Saving System
+  -Pause Menu
+  -Restart Menu
 
-3. How to Play
-Objective:
-Match all pairs of cards as quickly as possible to clear the board and achieve the fastest time in each level.
+---
 
-Controls:
-
-Tap a card to flip it over.
-
-Tap a second card to attempt a match.
-
-Rules:
-
-If the two cards you select match, they will disappear.
-
-If the two cards you select don't match, they will flip back over after a short delay.
-
-The timer starts automatically at the beginning of the level.
-
-The game ends when all card pairs are matched.
-
-Your completion time will be displayed at the end of the level.
-
-The fastest time achieved is saved as your Best Time.
-
-Overall Goal:
-Clear the board in the shortest time possible and try to beat your personal best score in each level.
-
-5. Core Features Implemented 
-
-Card flipping mechanic
-
-Match detection system
-
-Randomized board generation
-
-Timer system
-
-Win screen display
-
-Best time saving system
-
-Pause Menu
-
+## 5. Collaborators
+- Hemanth Rao
+- Sarah Racel
+- Phillip Ruff
