@@ -1,11 +1,18 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    private float timer = 0f;
+    private float timer = 1f;
     private bool isPlaying = true;
+
+    private void Start()
+    {
+        Time.timeScale = 1f; 
+    }
+
 
     private void Awake()
     {
@@ -33,4 +40,13 @@ public class GameManager : MonoBehaviour
 
         UIManager.Instance.ShowWinScreen(timer);
     }
+
+    public void RestartLevel()
+    {
+        Time.timeScale = 1f;
+        UnityEngine.SceneManagement.SceneManager.LoadScene(
+            UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
+    }
+
+
 }

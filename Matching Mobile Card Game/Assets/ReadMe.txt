@@ -27,6 +27,8 @@ Tap a card to flip it over.
 
 Tap a second card to attempt a match.
 
+Swipe down to restart the level.
+
 Rules:
 
 If the two cards you select match, they will disappear.
