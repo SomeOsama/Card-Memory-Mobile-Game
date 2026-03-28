@@ -439,7 +439,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   currentLevel: 1
-  cardsPerLevel: 04000000080000000c000000
+  cardsPerLevel: 04000000080000000c000000100000001400000018000000
 --- !u!1 &733013721
 GameObject:
   m_ObjectHideFlags: 0
@@ -729,13 +729,18 @@ MonoBehaviour:
   cardPrefab: {fileID: 5028665396842176408, guid: 0dd7a4f4490f25146ba2c6c3c7e3c3ce, type: 3}
   gridParent: {fileID: 77598683}
   cardSprites:
-  - {fileID: 8407525773127564498, guid: 090b6f6ba701b49479f20bc12474ba0b, type: 3}
-  - {fileID: 1339600782864360008, guid: 6d50da3948d57c34b8c18c26e4115117, type: 3}
-  - {fileID: -7396642452269909456, guid: e89fc436918c44d4b9ad7634657db43f, type: 3}
-  - {fileID: 7389956682209819974, guid: cb3c1a1aa4121d54dad538ad9a7b5545, type: 3}
-  - {fileID: -7359612135698132996, guid: e2eb66ad2f7a2b8419e709c9d9d4e7b4, type: 3}
-  - {fileID: -2632239930475580426, guid: 30351b59bf998004d911279069a79362, type: 3}
-  - {fileID: -3560612208618411283, guid: 4b41e45de7385d14190f696eaefb78a0, type: 3}
+  - {fileID: -8613782550035012474, guid: e80683b536788054c9ab42d2ac884d42, type: 3}
+  - {fileID: 1094516292850449309, guid: 208331bf585f6444fa1451c22e061f3f, type: 3}
+  - {fileID: -1462724231797034654, guid: 3406ccb345617c64a8a7330a26853408, type: 3}
+  - {fileID: 2232577004034428978, guid: 4b60f54de86eb0a44b7a6fad821b6a22, type: 3}
+  - {fileID: -4086548684261302073, guid: 77a7acac3238ab842bcc2b7e26853dd8, type: 3}
+  - {fileID: -3253842741678472833, guid: 170faaa03bdc66845af404c3c4d772d9, type: 3}
+  - {fileID: 5478227824620268740, guid: 4b466b70231abff4f81c1437e7c504ed, type: 3}
+  - {fileID: -6836475599491807286, guid: 340a0536a40a3354ab1cbf0793a506fb, type: 3}
+  - {fileID: 6305529581232910521, guid: 4845d4da3069d7a4999d9af25238c6bc, type: 3}
+  - {fileID: 6038971298504120516, guid: 5e7fe08007ddc764fab65e7c3bae8a08, type: 3}
+  - {fileID: -3907495654729447440, guid: a8add0ddf0790ea41b09149185c43cae, type: 3}
+  - {fileID: -7838196086296843669, guid: 046038bc1cc4f094699ffb05bb2b6bd8, type: 3}
 --- !u!1 &858963777
 GameObject:
   m_ObjectHideFlags: 0
@@ -1376,7 +1381,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -7093269957455760846, guid: b570eb497f1eeaa48bbb5e960f6916c8, type: 3}
+  m_Sprite: {fileID: 2595113073889776955, guid: 9fc8a1223afb56e489a15ae10a9a5da5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
