@@ -42,7 +42,8 @@ public class Card : MonoBehaviour
 
     public void SetMatched()
     {
-        isMatched = true;
-        gameObject.SetActive(false);
+        GetComponent<Button>().interactable = false;
+        GetComponent<Image>().color = new Color(1, 1, 1, 0.3f);
     }
+
 }

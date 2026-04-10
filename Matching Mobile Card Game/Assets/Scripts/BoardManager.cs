@@ -73,12 +73,14 @@ public class BoardManager : MonoBehaviour
     {
         isChecking = true;
 
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
 
         if (flippedCards[0].cardID == flippedCards[1].cardID)
-        {
+        {        
             flippedCards[0].SetMatched();
             flippedCards[1].SetMatched();
+
+            yield return new WaitForSeconds(0.5f);          
 
             matchesRemaining--;
 
@@ -96,6 +98,7 @@ public class BoardManager : MonoBehaviour
         flippedCards.Clear();
         isChecking = false;
     }
+
 
     void Shuffle(List<int> list)
     {
