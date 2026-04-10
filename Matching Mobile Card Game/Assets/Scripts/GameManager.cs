@@ -5,8 +5,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    private float timer = 1f;
-    private bool isPlaying = true;
+    private float timer = 0f;
+    private bool isPlaying = false;
 
     public int currentLevel = 1; 
     public int[] cardsPerLevel = { 4, 8, 12 }; 
@@ -22,43 +22,75 @@ public class GameManager : MonoBehaviour
         Instance = this;
     }
 
+    private bool waitingForNextLevel = false;
+
     private void Update()
     {
-        if (!isPlaying) return;
+        if (!isPlaying && !waitingForNextLevel)
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                StartGame();
+            }
+            return;
+        }
+
+        if (waitingForNextLevel)
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                LoadNextLevel();
+            }
+            return;
+        }
 
         timer += Time.deltaTime;
         UIManager.Instance.UpdateTimer(timer);
     }
 
+
+    void StartGame()
+    {
+        isPlaying = true;
+        timer = 0f;
+
+        
+        if (UIManager.Instance != null)
+            UIManager.Instance.HideStartText();
+    }
+
+
+
     public void LevelComplete()
     {
         isPlaying = false;
+        waitingForNextLevel = true;
 
-        // Save best time
         float bestTime = PlayerPrefs.GetFloat("BestTime", 9999f);
         if (timer < bestTime)
             PlayerPrefs.SetFloat("BestTime", timer);
 
-        // Show Win Panel
         if (UIManager.Instance != null)
             UIManager.Instance.ShowWinScreen(timer);
-
-        // Move to next level if exists
-        if (currentLevel < cardsPerLevel.Length)
-        {
-            currentLevel++;
-            Invoke(nameof(LoadNextLevel), 1f); // wait 1 second before next level
-        }
     }
+
 
     void LoadNextLevel()
     {
-        BoardManager.Instance.GenerateBoard(currentLevel);
-        timer = 0f;
-        isPlaying = true;
+        waitingForNextLevel = false;
 
-        UIManager.Instance.HideWinPanel();
+        if (currentLevel < cardsPerLevel.Length)
+            currentLevel++;
+
+        BoardManager.Instance.GenerateBoard(currentLevel);
+
+        timer = 0f;
+        isPlaying = false; 
+
+        if (UIManager.Instance != null)
+            UIManager.Instance.HideWinPanel();
     }
+
 
 
 

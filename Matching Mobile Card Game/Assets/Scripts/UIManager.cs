@@ -9,6 +9,7 @@ public class UIManager : MonoBehaviour
     public GameObject winPanel;
     public Text winTimeText;
     public Text bestTimeText;
+    public Text startText;
 
     private void Awake()
     {
@@ -35,6 +36,12 @@ public class UIManager : MonoBehaviour
     {
         if (winPanel != null)
             winPanel.SetActive(false);
+    }
+
+    public void HideStartText()
+    {
+        if (startText != null)
+            startText.gameObject.SetActive(false);
     }
 
 
