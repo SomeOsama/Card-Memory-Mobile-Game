@@ -12,6 +12,12 @@ public class Card : MonoBehaviour
     private bool isFlipped = false;
     private bool isMatched = false;
 
+    AudioSource fliped;
+
+    private void Start()
+    {
+        fliped = GetComponent<AudioSource>();
+    }
     public void SetCard(int id, Sprite front)
     {
         cardID = id;
@@ -26,6 +32,8 @@ public class Card : MonoBehaviour
 
         FlipUp();
         BoardManager.Instance.CardFlipped(this);
+
+        fliped.Play();
     }
 
     public void FlipUp()

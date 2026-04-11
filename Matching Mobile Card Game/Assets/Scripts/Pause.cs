@@ -63,7 +63,7 @@ public class Pause : MonoBehaviour
     {
         Time.timeScale = 1f;
         isPaused = false;
-        SceneManager.LoadScene("HomeScene");
+        SceneManager.LoadScene("Menu");
     }
 
     public bool IsPaused => isPaused;
