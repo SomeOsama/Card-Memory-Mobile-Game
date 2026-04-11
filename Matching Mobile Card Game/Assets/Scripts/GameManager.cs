@@ -26,6 +26,11 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
+        if (Pause.Instance != null && Pause.Instance.IsPaused) 
+        {
+            return;
+        }
+
         if (!isPlaying && !waitingForNextLevel)
         {
             if (Input.GetMouseButtonDown(0))
@@ -91,16 +96,12 @@ public class GameManager : MonoBehaviour
             UIManager.Instance.HideWinPanel();
     }
 
-
-
-
     public void RestartLevel()
     {
         Time.timeScale = 1f;
         UnityEngine.SceneManagement.SceneManager.LoadScene(
             UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
     }
-
 
     private bool isPaused = false;
 
@@ -118,9 +119,8 @@ public class GameManager : MonoBehaviour
         }
     }
 
-
-  
-
-
-
+    public void SetPausedState(bool paused)
+    {
+        isPaused = paused;
+    }
 }
