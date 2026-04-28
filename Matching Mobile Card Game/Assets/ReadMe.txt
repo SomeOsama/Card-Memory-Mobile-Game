@@ -41,7 +41,9 @@ The timer starts automatically at the beginning of the level.
 
 The game ends when all card pairs are matched.
 
-Your completion time will be displayed at the end of the level.
+When you get multiple pairs matched in a row, you get a combo resulting in 3 seconds taken off your time.
+
+Your completion time will be displayed at the end of the level as well as your best time, combo amount, and the amount of moves you took to complete that level.
 
 The fastest time achieved is saved as your Best Time.
 
@@ -53,6 +55,8 @@ Clear the board in the shortest time possible and try to beat your personal best
 Card flipping mechanic
 
 Match detection system
+
+Move and Combo Counter
 
 Randomized board generation
 
@@ -67,4 +71,6 @@ Pause Menu
 Main Menu
 
 3 different levels
+
+Card Shop to change card themes
 
