@@ -7,6 +7,10 @@ public class GameManager : MonoBehaviour
 
     private float timer = 0f;
     private bool isPlaying = false;
+    public int moveCount = 0;
+    public int comboCount = 0;
+    public int maxCombo = 0;
+
 
     public int currentLevel = 1; 
     public int[] cardsPerLevel = { 4, 8, 12 }; 
@@ -58,10 +62,15 @@ public class GameManager : MonoBehaviour
     {
         isPlaying = true;
         timer = 0f;
+        moveCount = 0;
+        comboCount = 0;
+        maxCombo = 0;
 
-        
         if (UIManager.Instance != null)
+        {
             UIManager.Instance.HideStartText();
+        }            
+       
     }
 
 
@@ -123,4 +132,29 @@ public class GameManager : MonoBehaviour
     {
         isPaused = paused;
     }
+
+    public void RegisterMove()
+    {
+        moveCount++;
+    }
+
+    public void RegisterMatch()
+    {
+        comboCount++;
+
+        if (comboCount > 1) 
+        {
+            timer -= 3f;
+            if (timer < 0) timer = 0;
+        }
+
+        if (comboCount > maxCombo)
+            maxCombo = comboCount;
+    }
+
+    public void ResetCombo()
+    {
+        comboCount = 0;
+    }
+
 }

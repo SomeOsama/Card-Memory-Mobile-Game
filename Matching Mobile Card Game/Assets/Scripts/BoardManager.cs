@@ -65,6 +65,7 @@ public class BoardManager : MonoBehaviour
 
         if (flippedCards.Count == 2)
         {
+            GameManager.Instance.RegisterMove();
             StartCoroutine(CheckMatch());
         }
     }
@@ -76,7 +77,8 @@ public class BoardManager : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
 
         if (flippedCards[0].cardID == flippedCards[1].cardID)
-        {        
+        {
+            GameManager.Instance.RegisterMatch();
             flippedCards[0].SetMatched();
             flippedCards[1].SetMatched();
 
@@ -91,6 +93,7 @@ public class BoardManager : MonoBehaviour
         }
         else
         {
+            GameManager.Instance.ResetCombo();
             flippedCards[0].FlipDown();
             flippedCards[1].FlipDown();
         }

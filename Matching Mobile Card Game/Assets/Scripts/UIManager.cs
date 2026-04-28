@@ -10,6 +10,9 @@ public class UIManager : MonoBehaviour
     public Text winTimeText;
     public Text bestTimeText;
     public Text startText;
+    public Text moveCountText;
+    public Text comboText;
+
 
     private void Awake()
     {
@@ -29,7 +32,11 @@ public class UIManager : MonoBehaviour
 
         float bestTime = PlayerPrefs.GetFloat("BestTime", time);
         bestTimeText.text = "Best Time: " + bestTime.ToString("F2");
+
+        moveCountText.text = "Moves: " + GameManager.Instance.moveCount;
+        comboText.text = "Max Combo: " + GameManager.Instance.maxCombo;
     }
+
 
 
     public void HideWinPanel()
