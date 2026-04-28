@@ -23,6 +23,11 @@ public class SceneSwitcher : MonoBehaviour
     {
         SceneManager.LoadScene("Credits");
     }
+    public void Shop()
+    {
+        SceneManager.LoadScene("Shop");
+    }
+
     public void Exit()
     {
         Application.Quit();
